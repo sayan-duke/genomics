@@ -1,0 +1,10 @@
+Programs for leave-one-out calculations on enrichment scores to create test and train sets for classification.
+
+Use either formatForOctave.pl or formatForOctave.m to format expression gct file, phenotype cls file, and geneset gmt file to be used in octave.
+	Inputs: expression gct file, phenotype label cls file, geneset gmt file
+	Output: expression.txt, labels.txt, listind.txt
+
+octaveEnrich.m, enrich.m, npcorrelations.m, cell2mat.m: octave-2.1.72 programs for calculating enrichment of test and train samples.
+	Inputs: expression.txt, labels.txt, listind.txt (from formatForOctave.m			or formatForOctave.pl)
+	Outputs: train#.txt, test#.txt (where #= test sample's index in expressi		on data set)
+This is to be run from the command line by octave-2.1.72 octaveEnrich.m # or run on cluster using .q file (for an example, see enrich.q)
